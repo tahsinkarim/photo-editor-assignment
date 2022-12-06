@@ -7,20 +7,20 @@
     <title>Photo Editor</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./node_modules/cropperjs/dist/cropper.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <h1>Photo Editor</h1>
       <div>
-        <div class="form-group container upload-container">
-          <label for="file-input">Upload Image</label>
-          <input
-            class="form-control"
-            type="file"
-            id="file-input"
-            required
-            accept="image/*"
-          />
+        <div class="form-group container upload-container" id="file-input">
+          <label for="file-input"></label>
+          <input class="form-control" type="file" required accept="image/*" />
         </div>
 
         <div class="img-modal hidden">
@@ -42,20 +42,33 @@
         </div>
       </div>
 
-      <div class="modal-2">
+      <div class="modal-2 hidden">
         <div class="box-2 img-result">
           <img src="" alt="" class="cropped" />
-          <div class="bg">
-            <img src="./asset/user_image_frame_2.png" alt="" />
+          <div class="bg hidden">
+            <img src="" alt="" class="filter-img" />
           </div>
         </div>
         <div class="options">
-          <div onclick="selectFilter(1)">1</div>
-          <div onclick="selectFilter(2)">2</div>
-          <div onclick="selectFilter(3)">3</div>
-          <div onclick="selectFilter(4)">4</div>
+          <div onclick="unselectFilter()">
+            <p class="option"></p>
+          </div>
+          <div onclick="selectFilter(1)">
+            <img class="option" src="./asset/user_image_frame_1.png" alt="" />
+          </div>
+          <div onclick="selectFilter(2)">
+            <img class="option" src="./asset/user_image_frame_2.png" alt="" />
+          </div>
+          <div onclick="selectFilter(3)">
+            <img class="option" src="./asset/user_image_frame_3.png" alt="" />
+          </div>
+          <div onclick="selectFilter(4)">
+            <img class="option" src="./asset/user_image_frame_4.png" alt="" />
+          </div>
         </div>
       </div>
+
+      <div class="home-result"></div>
     </div>
     <script src="./node_modules/cropperjs/dist/cropper.min.js"></script>
     <script src="./script.js"></script>

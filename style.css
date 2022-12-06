@@ -5,8 +5,19 @@
   align-items: flex-start;
   flex-wrap: wrap;
 } */
+body {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  color: #68b984;
+}
+
 .upload-container {
-  border: 1px solid gray;
+  border: 1px solid #d3d3d3;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -22,7 +33,7 @@
 .box {
   padding: 0.5;
   width: 100%;
-  background-color: gray;
+  background-color: #d3d3d3;
   display: flex;
   justify-content: center;
 }
@@ -64,6 +75,7 @@ img {
   margin-top: 16px;
   display: inline-block;
   position: relative;
+  width: 100%;
 }
 
 .img-result img {
@@ -85,18 +97,23 @@ img {
   width: 100%;
 }
 
+.save {
+  background: blue;
+  color: white;
+  border: none;
+  padding: 4px 20px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
 .img-modal {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: gray;
+  background: #d3d3d3;
 }
 
-.hidden {
-  display: none;
-}
 .modal-2 {
   width: max-content;
   position: relative;
@@ -108,10 +125,29 @@ img {
 .bg {
   position: absolute;
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   mix-blend-mode: lighten;
   background-color: white;
 }
 .options {
-  display: flex;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-top: 40px;
+}
+
+.options div .option {
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  height: 30px;
+  width: 30px;
+  padding: 12px;
+}
+.bg img {
+  height: 100%;
+}
+.hidden {
+  display: none;
 }

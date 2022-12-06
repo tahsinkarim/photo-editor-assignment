@@ -1,6 +1,7 @@
 let result = document.querySelector(".result")
 let img_result= document.querySelector(".img-result")
 let img_modal= document.querySelector(".img-modal")
+let modal2 = document.querySelector(".modal-2")
 let img_w = document.querySelector(".img-w")
 let img_h = document.querySelector(".img-h")
 let options = document.querySelector(".options")
@@ -12,6 +13,8 @@ let cropper = ""
 
 upload.addEventListener('change',(e) => {
     console.log(e)
+
+    modal2.classList.add('hidden')
 
     const reader = new FileReader()
 
@@ -29,6 +32,7 @@ upload.addEventListener('change',(e) => {
             save.classList.remove("hidden")
             options.classList.remove("hidden")
 
+
             cropper = new Cropper(img, {
                 viewMode:2,
                 aspectRatio: 0,
@@ -45,6 +49,7 @@ upload.addEventListener('change',(e) => {
     save.addEventListener('click', (e) =>{
         e.preventDefault
 
+
         let imgSrc = cropper
         .getCroppedCanvas({
             width: 300
@@ -52,6 +57,7 @@ upload.addEventListener('change',(e) => {
         .toDataURL();
 
         img_result.classList.remove('hidden')
+        modal2.classList.remove('hidden')
 
         cropped.src = imgSrc
 
@@ -59,6 +65,23 @@ upload.addEventListener('change',(e) => {
     })
 })
 
+const filter_img = document.querySelector('.filter-img')
+
 function selectFilter(number){
-    console.log(number)
+    let bg = document.querySelector(".bg")
+
+    bg.classList.remove('hidden')
+    filter_img.src = `./asset/user_image_frame_${number}.png`
+}
+
+function unselectFilter(){
+    let bg = document.querySelector(".bg")
+    bg.classList.add('hidden')
+}
+
+function saveImage(){
+    const box_2 = document.querySelector(".box-2")
+    const home_result = document.querySelector(".home-result")
+
+    home_result.appendChild(box_2)
 }
