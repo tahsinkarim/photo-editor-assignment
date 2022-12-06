@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./node_modules/cropperjs/dist/cropper.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Photo Editor</h1>
+      <div>
+        <div class="form-group container upload-container">
+          <label for="file-input">Upload Image</label>
+          <input
+            class="form-control"
+            type="file"
+            id="file-input"
+            required
+            accept="image/*"
+          />
+        </div>
+
+        <div class="img-modal hidden">
+          <div class="box-2 img-container">
+            <div class="result"></div>
+            <div class="box">
+              <div class="options hidden">
+                <input
+                  type="number"
+                  class="img-w hidden"
+                  value="300"
+                  min="100"
+                  max="1200"
+                />
+              </div>
+              <button class="save hidden">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-2">
+        <div class="box-2 img-result">
+          <img src="" alt="" class="cropped" />
+          <div class="bg">
+            <img src="./asset/user_image_frame_2.png" alt="" />
+          </div>
+        </div>
+        <div class="options">
+          <div onclick="selectFilter(1)">1</div>
+          <div onclick="selectFilter(2)">2</div>
+          <div onclick="selectFilter(3)">3</div>
+          <div onclick="selectFilter(4)">4</div>
+        </div>
+      </div>
+    </div>
+    <script src="./node_modules/cropperjs/dist/cropper.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+/* .page {
+  margin: 1em auto;
+  max-width: 768px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+} */
+.upload-container {
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.upload-container label {
+  margin-bottom: 16px;
+}
+.box {
+  padding: 0.5;
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+}
+
+.box-2 {
+  padding: 0.5;
+}
+
+.options label,
+.options input {
+  width: 4em;
+  padding: 0.5em 1em;
+}
+
+.btn {
+  background-color: white;
+  color: #000;
+  border: 1px solid black;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  margin: 0.8em 0.3em;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.img {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-result {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 16px;
+  display: inline-block;
+  position: relative;
+}
+
+.img-result img {
+  width: 100%;
+}
+
+.img-container {
+  max-width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.img-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: gray;
+}
+
+.hidden {
+  display: none;
+}
+.modal-2 {
+  width: max-content;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  mix-blend-mode: lighten;
+  background-color: white;
+}
+.options {
+  display: flex;
+  gap: 16px;
+}
