@@ -92,13 +92,17 @@ img {
   width: 100vw;
   min-height: 100vh;
 }
+.result {
+  width: 80%;
+  margin: 0 auto;
+}
 
 .img-container img {
   width: 100%;
 }
 
 .save {
-  background: blue;
+  background: #68b984;
   color: white;
   border: none;
   padding: 4px 20px;
